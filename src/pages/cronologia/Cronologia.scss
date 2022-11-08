@@ -1,0 +1,101 @@
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding-top: 122px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+
+    img{
+        width: 80px;
+        height: 80px;
+        margin: 19px 133px 0;
+        border-radius: 100px;
+        top:0px;
+        padding-bottom: 200px;
+    }
+    h5{
+            font-family: GOT-font;
+            font-size: 27px;}
+
+    p{
+     font-family: GOT-font;
+      font-size: 15px;}
+}
+
+
+.izquierda{   
+    border-top: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+float: left;
+display: flex;
+margin-right: 50%;
+width: 50%;
+}
+
+.derecha{
+    width: 50%;
+    margin-left: 50%;
+    float: right;
+    display: flex;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255)
+   
+ 
+}
+.Rectangle-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.CRONOLOGIA {
+    display: inline-block;
+    flex-direction: column;
+    width: 50%;
+}
+
+  .Ellipse-1 {
+    width: 59px;
+    height: 59px;
+    background:none;
+    color: white;
+    border-radius: 100px;
+    border:2px solid white;
+    margin-bottom: 100px;
+  }
+
+  .head{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:100px;
+    width:100%;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background-color: black;
+
+    
+}
+
+.links-home{
+        font-family: GOT-font;
+        color:white;
+        margin:0px;
+        font-size: 24px;
+        z-index:99;
+        margin-right: 10%;
+}
