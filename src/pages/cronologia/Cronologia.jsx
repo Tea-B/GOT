@@ -1,77 +1,71 @@
-import React from 'react'
 import axios from "axios";
-import { useState } from 'react'
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import "./Cronologia.scss";
+import { Link } from "react-router-dom";
 
-const Cronologia = () => {
+export default function Cronologia() {
+    const [personajes, setPersonajes] = useState([]);
+    const [orden, setOrden] = useState(true);
+   
+    useEffect(() => {
+        const getData = async () => {
+            const { data } = await axios.get(`https://api.got.show/api/show/characters/`);
+            console.log(data);
+            setPersonajes(data);
+            
+        };
+        getData();
+    }, []);
 
-  const [personajes, setPersonajes] = useState([]);
+    useEffect(() => {
+        if (orden) {
+            ordenarMayorAMenor(personajes);
+        } else {
+            ordenarMenorAMayor(personajes);
+        }
+    }, [orden, personajes]);
 
-  useEffect (()=> {
+    return (
+<div className="all">
+         <div className="head">
+            <Link to="/"><h6 className='links-home'>HOME</h6></Link>
+           </div>
 
-    const getData = async ()=> {
-      const {data} = await axios.get("https://api.got.show/api/show/characters/");
+      <div className="Rectangle-4">
+           <button className="Ellipse-1" type="button" onClick={cambioOrden}> 0 </button>
+       </div>
 
-      console.log(data);
-      setPersonajes(data)
-    };
-
-    getData();
-
-  }, []);
-
-  let mappedpersonajes = [];
-
-  personajes.filter((item) => {
-    let { image } = item;
-    const element = item.age;
-    let conteo = [];
-    for(let elemento in element) {
-      conteo.push(elemento)
+        <div className="CRONOLOGIA">
+             {personajes.map((item, index) => (
+                <div key={index} className={index % 2 === 0 ? "izquierda" : "derecha"}>
+                      <div className="card">
+                            <p>{item.age?.age}</p>
+                            <h5>{item.name}</h5>
+                            <img  className="image-19" alt="" src={item.image} />
+                      </div>
+                </div> ))}    
+           </div>
+                  <div className="footer">
+                        <Link to="/characters"><h6 className='links-footer'>PERSONAJES</h6> </Link> 
+                        <Link to="/houses"><h6 className='links-footer'>CASAS</h6></Link>
+                        <Link to="/chronology"><h6 className='links-footer'>CRONOLOGÍA</h6></Link>
+                  </div>
+</div>
+    );
+    function cambioOrden() {
+        setOrden(!orden);
     }
-    if (conteo.length !== 2) {
-      console.log("Este personaje no tiene edad o nombre");
-    } else if (conteo.length === 2) {
-      let { name, age } = element
-      mappedpersonajes.push({name, age, image});
+    function ordenarMayorAMenor(personajes) {
+        if (personajes && personajes.length > 0) {
+            personajes.sort((a, b) => b.age?.age - a.age?.age);
+        }
+        return personajes;
     }
-  });
-
-  console.log(mappedpersonajes);
-  // .map((item, index) => {
-  //   const { name, age } = item.age;
-  //   console.log(name);
-  //   <div>
-  //     <p>{name}</p>
-  //     <p>{age}</p>
-  //   </div>
-  // })
-
-  // var sources = images.filter(function(img) {
-  //   if (img.src.split('.').pop() === "json") {
-  //     return false; // skip
-  //   }
-  //   return true;
-  // }).map(function(img) { return img.src; });
-
-  return (
-    <div>
-    {
-      mappedpersonajes.map((item) => {
-        const { name, age, image } = item;
-        return (
-          <div>
-            <p>{name}</p>
-            <p>{age}</p>
-            <img src={image} alt=""/>
-          </div>
-        )
-      })
+    function ordenarMenorAMayor(personajes) {
+        if (personajes && personajes.length > 0) {
+            personajes.sort((a, b) => a.age?.age - b.age?.age);
+        }
+        return personajes;
     }
-    </div>
-  )
 }
 
-
-
-export default Cronologia
