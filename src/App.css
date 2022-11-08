@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  color: white;
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer {
+  height: 16vh;
+}
