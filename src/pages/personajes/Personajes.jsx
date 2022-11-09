@@ -4,6 +4,9 @@ import '../personajes/Personajes.scss';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { Form } from './buscador'
+
+
 
 const Characters = () => {
   const [characters, setcharacters] = useState([]);
@@ -26,9 +29,6 @@ const Characters = () => {
   return (
     <div className="page-container">
 
-    <div className="nav">
-      <p>Barra buscadora, idiomas</p>
-    </div>
     <div className="gallery-father">
       {characters.map((item, index) =>
       <div className="galley-element">
