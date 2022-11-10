@@ -1,33 +1,18 @@
 
-h1{
-    width: 1367px;
-    height: 390px;
-    font-family: GOT-font;
-    font-size: 160px;
-    background-color: transparent;
-    text-align: center;
-    font-weight: lighter;
- }
+ .todo p{
 
- a{
-  background-color: transparent !important;
-  h6{
-    font-weight: lighter;
-    background-color: transparent !important;
-   }
- }
- 
+  font-family: GOT-font;
+  font-size: 900%;
+  margin: 0px;
+  padding-top: 14%;
+  }
 
 .todo{
     background-image: url(https://cdn.zeplin.io/5e1c73baff24c3be01ba9cca/assets/6065c636-48ca-4142-8b36-8fd60a70402b.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    background-position: center;
+   height: 100vh;
+   text-align: center;
+
 }
 
   .abajo{
