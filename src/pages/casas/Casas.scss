@@ -21,5 +21,24 @@
 }
 
 header {
-    height: 14vh;
+    height: 100px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    button:hover{cursor: pointer}
+    img{width:40px;margin: 0px 2% 0px 2%;}
+    input{
+        width: 60%;
+        border-top: 0px solid black;
+        border-right: 0px solid black;
+    }
+
+    div{
+        width:50%;
+        display:flex;
+        justify-content: center;
+    }
 }
+
+

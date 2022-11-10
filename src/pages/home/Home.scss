@@ -1,25 +1,33 @@
 
- .todo p{
+h1{
     width: 1367px;
     height: 390px;
     font-family: GOT-font;
-    font-size: 176px;
-    margin-left: 13%;
-    position:fixed;
-    padding-bottom: 300px;}
+    font-size: 160px;
+    background-color: transparent;
+    text-align: center;
+    font-weight: lighter;
+ }
+
+ a{
+  background-color: transparent !important;
+  h6{
+    font-weight: lighter;
+    background-color: transparent !important;
+   }
+ }
+ 
 
 .todo{
     background-image: url(https://cdn.zeplin.io/5e1c73baff24c3be01ba9cca/assets/6065c636-48ca-4142-8b36-8fd60a70402b.png);
     background-repeat: no-repeat;
-    background-position: center;
-    width: 1920px;
-    height: 1080px;
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-content: center;
-
+    overflow: hidden;
 }
 
   .abajo{
@@ -28,7 +36,8 @@
     align-items: center;
     height:100px;
     width:100%;
-    position:fixed;
+    position:absolute;
     bottom:0px;
     left:0px;
+    background-color: transparent;
   }
