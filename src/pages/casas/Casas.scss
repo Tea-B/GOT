@@ -1,0 +1,44 @@
+.galery {
+    width: 97%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(16.66% - 48px);
+    height: calc(50% - 60px);
+    margin: 0px 24px 60px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+
+    & img {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+
+header {
+    height: 100px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    button:hover{cursor: pointer}
+    img{width:40px;margin: 0px 2% 0px 2%;}
+    input{
+        width: 60%;
+        border-top: 0px solid black;
+        border-right: 0px solid black;
+    }
+
+    div{
+        width:50%;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+

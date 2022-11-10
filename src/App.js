@@ -8,7 +8,9 @@ import Casas from './pages/casas/Casas';
 import CasaDetail from './pages/casas/casaDetail/CasaDetail';
 import Cronologia from './pages/cronologia/Cronologia';
 
+
 function App() {
+  
   return (
     <Router>
       <main>
@@ -27,6 +29,8 @@ function App() {
           <Route path="/chronology" element={<Cronologia></Cronologia>} />
         </Routes>
       </main>
+      <footer>
+      </footer>
     </Router>
   );
 }
