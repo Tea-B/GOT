@@ -45,11 +45,6 @@ export default function Cronologia() {
                       </div>
                 </div> ))}    
            </div>
-                  <div className="footer">
-                        <Link to="/characters"><h6 className='links-footer'>PERSONAJES</h6> </Link> 
-                        <Link to="/houses"><h6 className='links-footer'>CASAS</h6></Link>
-                        <Link to="/chronology"><h6 className='links-footer'>CRONOLOGÍA</h6></Link>
-                  </div>
 </div>
     );
     function cambioOrden() {

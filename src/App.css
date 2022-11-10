@@ -42,8 +42,31 @@
   background-color: black;
   margin: 0px;
   padding: 0px;
+  text-decoration: none;
 }
 
-footer {
-  height: 16vh;
+
+.footer{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  height:100px;
+  width:100%;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  background-color: black;
+  /* height: 16vh; */
+}
+
+.links-footer{
+  font-family: GOT-font;
+  color:white;
+  margin:0px;
+  font-size: 24px;
+  z-index:99;
+}
+
+.active {
+  text-decoration: underline;
 }

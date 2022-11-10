@@ -19,6 +19,7 @@ const Characters = () => {
       "https://api.got.show/api/show/characters/"
     );
       setcharacters(data);
+      console.log(data);
       characters.map((item, index) =>{
         if(item.image === "https://vignette.wikia.nocookie.net/gameofthrones/images/a/af/Mossador-s5e1-v2.jpg.jpg/revision/latest/scale-to-width-down/265?cb=20150427224509"){
           item.image = "https://assets.stickpng.com/images/5874ccfc42e4d628738559e0.png";
@@ -29,7 +30,7 @@ const Characters = () => {
       }
         
       )
-      console.log(characters)
+
     };
 
 
@@ -74,16 +75,7 @@ const Characters = () => {
       </div>
       )}
     </div>
-    </SimpleBar>
-    <div className="footer">
-      <Link to="/characters">
-        <h6 className='links-footer'>PERSONAJES</h6>
-      </Link>
-      <Link to="/houses"><h6 className='links-footer'>CASAS</h6></Link>
-      <Link to="/chronology"><h6 className='links-footer'>CRONOLOGÍA</h6></Link>
-      
-    </div>
-    
+    </SimpleBar>    
     </div>
     
 

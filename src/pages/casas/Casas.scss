@@ -2,24 +2,52 @@
     width: 97%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-.card {
+.cardC {
     width: calc(16.66% - 48px);
     height: calc(50% - 60px);
-    margin: 0px 24px 60px 24px;
+    margin: 0px 24px 24px 24px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
+    font-family: GOT-font;
+    font-size: 15px;
+    text-align: center;
 
     & img {
-        width: 100%;
+        width: 95%;
         margin-bottom: 24px;
     }
 }
 
 header {
     height: 14vh;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 2px;
+    bottom: 2px;
+}
+
+.simplebar-track{
+    background-color:#443d3d;
+}
+
+.simplebar-track.simplebar-vertical{
+    width: 4px !important;
+}
+
+.simplebar-scrollbar{
+    border-radius: 2px;
+    height: 90px !important;
+    min-height: 90px !important;
+    background-color: white;
+}
+
+.simplebar-scrollbar:before {
+    visibility: hidden;
 }
