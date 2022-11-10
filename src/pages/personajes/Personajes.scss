@@ -2,6 +2,8 @@
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
+    height:100%;
+    
 }
 .nav{
     width:100%;
@@ -19,6 +21,12 @@
     background-color: black;
 
     
+}
+.scroll{
+    width: 86vw;
+    height:calc(100vh - 160px);
+    margin: 0px 6vw 0px 8vw;
+    // backgroundColor: "black"
 }
 
 .links-footer{
@@ -76,4 +84,29 @@
     height:100%;
 
     
+}
+
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 2px;
+    bottom: 2px;
+}
+
+.simplebar-track{
+    background-color:#443d3d;
+}
+
+.simplebar-track.simplebar-vertical{
+    width: 4px !important;
+}
+
+.simplebar-scrollbar{
+    border-radius: 2px;
+    height: 90px !important;
+    min-height: 90px !important;
+    background-color: white;
+}
+
+.simplebar-scrollbar:before {
+    visibility: hidden;
 }

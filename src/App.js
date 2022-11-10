@@ -31,18 +31,6 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-        <Link to="/characters">
-          <button>Personajes</button>
-        </Link>
-        <Link to="/houses">
-          <button>Casas</button>
-        </Link>
-        <Link to="/chronology">
-          <button>Cronologia</button>
-        </Link>
       </footer>
     </Router>
   );
