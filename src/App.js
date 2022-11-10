@@ -7,7 +7,6 @@ import PersonajeDetail from './pages/personajes/personajeDetail/PersonajeDetail'
 import Casas from './pages/casas/Casas';
 import CasaDetail from './pages/casas/casaDetail/CasaDetail';
 import Cronologia from './pages/cronologia/Cronologia';
-import Header from './pages/personajes/buscador';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -86,7 +85,7 @@ function App() {
         <main>
           <Routes>
             <Route exact path="/" element={<Home></Home>} />
-            <Route path="/characters" element={<div><Header></Header><Personajes></Personajes></div>} />
+            <Route path="/characters" element={<div><Personajes></Personajes></div>} />
             <Route
                 path="/characters/:namePersonaje"
                 element={<PersonajeDetail></PersonajeDetail>}

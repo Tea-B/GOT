@@ -4,7 +4,6 @@ import '../personajes/Personajes.scss';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import { Form } from './buscador'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
@@ -37,6 +36,14 @@ const Characters = () => {
     getData();
   },[]);
 
+  const handleChange = (event) => {
+    const {value} = event.target;
+    searchChar(value);
+  }
+  const searchChar = (name) => {
+    let filtered = characters.filter((char) => char.name.toLowerCase().includes(name.toLowerCase()));
+    setcharacters(filtered);}
+
   // const Characters = () => {
   //   const [characters, setcharacters] = useState([]);
   
@@ -64,14 +71,35 @@ const Characters = () => {
   
   return (
     <div className="page-container">
+      <header>
+        <div>
+          <input type="text" placeholder='Buscar...' onChange={handleChange}/>
+        </div>
+        <div>
+          <Link to="/">
+            <img src="Group.svg" alt="house"></img>
+          </Link>
+          <button>
+            <img src="spain 1.svg" alt="españa"></img>
+          </button>
+          <button>
+          <img src="united-kingdom 1.svg" alt="uk"></img>
+          </button>
+
+        </div>
+      </header>
+      
     <SimpleBar forceVisible="y" autoHide={false} className="scroll">
     <div className="gallery-father">
       {characters.map((item, index) =>
       <div className="galley-element">
+        <Link to="/characters/{item.name}">
         <div className="img-container">
+        
         <img src = {item.image} alt="imagen personaje" className="imagenes"/>
         <h5 className="name">{item.name}</h5>
         </div>
+        </Link>
       </div>
       )}
     </div>
