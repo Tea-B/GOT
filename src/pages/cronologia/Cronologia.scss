@@ -6,6 +6,7 @@
     padding-top: 122px;
 }
 
+
 .card{
     display: flex;
     flex-direction: column;
@@ -20,7 +21,7 @@
         margin: 19px 133px 0;
         border-radius: 100px;
         top:0px;
-        padding-bottom: 200px;
+        margin-bottom: 200px;
     }
     h5{
             font-family: GOT-font;
@@ -33,33 +34,71 @@
 
 
 .izquierda{   
+    margin-right: 50%;
+    width: 50%;
     border-top: 2px solid rgb(255, 255, 255);
     border-right: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
-float: left;
-display: flex;
-margin-right: 50%;
-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .derecha{
     width: 50%;
     margin-left: 50%;
-    float: right;
     display: flex;
     border-top: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
-    border-left: 2px solid rgb(255, 255, 255)
-   
- 
+    border-left: 2px solid rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .Rectangle-4{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    flex-direction: column;
+    margin: 0px
+      
+}
+.bb{
+    transform: rotate(180deg);
 }
 
+
+.Ellipse-2{
+    background-color: aliceblue;
+    height: 100px;
+    width: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+      img{
+        width: 30px;
+        margin-top: 80px;
+ 
+
+      }
+    
+}
+.Ellipse-1 {
+    width: 59px;
+    height: 59px;
+    margin:0px;
+    background:none;
+    color: white;
+    border-radius: 100px;
+    border:2px solid white;
+   
+    img{
+        width: 100%;
+    }}
 
 .CRONOLOGIA {
     display: inline-block;
@@ -67,15 +106,6 @@ width: 50%;
     width: 50%;
 }
 
-  .Ellipse-1 {
-    width: 59px;
-    height: 59px;
-    background:none;
-    color: white;
-    border-radius: 100px;
-    border:2px solid white;
-    margin-bottom: 100px;
-  }
 
   .head{
     display:flex;
