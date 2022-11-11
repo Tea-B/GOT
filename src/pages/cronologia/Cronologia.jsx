@@ -52,10 +52,12 @@ export default function Cronologia() {
     
 <div className="all">
 
+           {/* <SimpleBarReact forceVisible="y" autoHide={false} className="scroll"> */}
            <div className="Rectangle-4">
-           <button className="Ellipse-1" type="button" onClick={cambioOrden}><img src={imagen}/></button>
+           <button className="Ellipse-1" type="button" onClick={cambioOrden}><img src={imagen} className= "flechas"/></button>
 
            <div className="Ellipse-2">    
+
            <img src={image} className={orden ? 'bb' : 'cc'}/>
 
            </div>
@@ -64,7 +66,7 @@ export default function Cronologia() {
        
         
         <div className="CRONOLOGIA">
-            {/* <SimpleBarReact style={{maxHeight:500}}> */}
+
              {personajes.map((item, index) => (
                 <div key={index} className={index % 2 === 0 ? "izquierda" : "derecha"}>
                       <div className="card">
@@ -72,17 +74,8 @@ export default function Cronologia() {
                             <h5>{item.name}</h5>
                             <img  className="image-19" alt="" src={item.image} />
                       </div>
-                </div> ))} 
-                 {/* </SimpleBarReact>   */}
-           </div>
-           
-           
-                  <div className="footer">
-                        <Link to="/characters"><h6 className='links-footer'>PERSONAJES</h6> </Link> 
-                        <Link to="/houses"><h6 className='links-footer'>CASAS</h6></Link>
-                        <Link to="/chronology"><h6 className='links-footer'>CRONOLOGÍA</h6></Link>
-                  </div>
 
+           </div>
 </div>
 </>
     );
