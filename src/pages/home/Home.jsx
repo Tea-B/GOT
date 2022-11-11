@@ -6,7 +6,7 @@ const Home = () => {
       
  
   return (
-    <div className="todo">
+    <div className="tod">
 
     <h1>Game of Thrones</h1>
 

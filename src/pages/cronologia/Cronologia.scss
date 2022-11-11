@@ -3,16 +3,16 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-    padding-top: 122px;
+    padding-top: 5%;
 }
 
 
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: transparent! important;
     align-items: center;
-    align-content: center;
+
     
 
     img{
@@ -20,7 +20,7 @@
         height: 80px;
         margin: 19px 133px 0;
         border-radius: 100px;
-        top:0px;
+        top:2px;
         margin-bottom: 200px;
     }
     h5{
@@ -35,7 +35,7 @@
 
 .izquierda{   
     margin-right: 50%;
-    width: 50%;
+  
     border-top: 2px solid rgb(255, 255, 255);
     border-right: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
@@ -47,7 +47,7 @@
 }
 
 .derecha{
-    width: 50%;
+ 
     margin-left: 50%;
     display: flex;
     border-top: 2px solid rgb(255, 255, 255);
@@ -64,8 +64,8 @@
     align-items: center;
     align-content: center;
     flex-direction: column;
-    margin: 0px
-      
+    margin: 0px;
+   
 }
 .Ellipse-2 .bb{
     transform: rotate(180deg);
@@ -78,10 +78,14 @@
     background-color: transparent!important;
     z-index: 99;
 }
-
-
+.Ellipse-2 .bb{
+    background-color: transparent! important;
+}
+.Ellipse-2 .cc{
+    background-color: transparent! important;
+}
 .Ellipse-2{
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     height: 100px;
     width: 2px;
     display: flex;
@@ -89,8 +93,8 @@
     flex-direction: column;
       img{
         width: 30px;
-        margin-top: 80px;
- 
+        margin-top: 34px;
+      
 
       }
     
@@ -98,16 +102,32 @@
 .Ellipse-1 {
     width: 59px;
     height: 59px;
-    margin:0px;
-    background:none;
+  background-color: black;
     color: white;
     border-radius: 100px;
     border:2px solid white;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  box-shadow: 0 9px  #323030;;
+
+  img{
+  height: 35px;
+  background-color: transparent! important;
+    width: 100%;
+}}
+
+  .Ellipse-1:hover {
+    background-color: #323030;
+}
+
+  .Ellipse-1:active {
+  background-color: #666;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
    
-    img{
-        width: 100%;
-        background-color: transparent!important;
-    }}
+
 
 .CRONOLOGIA {
     display: inline-block;
@@ -137,4 +157,17 @@
         font-size: 24px;
         z-index:99;
         margin-right: 10%;
+}
+.arriba{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    
+}
+.top{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
 }

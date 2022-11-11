@@ -33,12 +33,24 @@ export default function Cronologia() {
 
    
     return (
-        
+        <>
+<header  className="top">
+       
+       <div  className="arriba">
+         <Link to="/">
+           <img src="Group.svg" alt="house"></img>
+         </Link>
+         <button>
+           <img src="spain 1.svg" alt="españa"></img>
+         </button>
+         <button>
+         <img src="united-kingdom 1.svg" alt="uk"></img>
+         </button>
 
+       </div>
+     </header>
+    
 <div className="all">
-         <div className="head">
-            <Link to="/"><h6 className='links-home'>HOME</h6></Link>
-           </div>
 
            {/* <SimpleBarReact forceVisible="y" autoHide={false} className="scroll"> */}
            <div className="Rectangle-4">
@@ -47,13 +59,14 @@ export default function Cronologia() {
            <div className="Ellipse-2">    
 
            <img src={image} className={orden ? 'bb' : 'cc'}/>
-           
+
            </div>
        </div>
        
        
         
         <div className="CRONOLOGIA">
+
              {personajes.map((item, index) => (
                 <div key={index} className={index % 2 === 0 ? "izquierda" : "derecha"}>
                       <div className="card">
@@ -61,10 +74,10 @@ export default function Cronologia() {
                             <h5>{item.name}</h5>
                             <img  className="image-19" alt="" src={item.image} />
                       </div>
-                </div> ))}  
+
            </div>
 </div>
-
+</>
     );
     function cambioOrden() {
         setOrden(!orden);
