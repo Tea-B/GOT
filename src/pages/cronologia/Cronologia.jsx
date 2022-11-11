@@ -64,7 +64,7 @@ export default function Cronologia() {
        
         
         <div className="CRONOLOGIA">
-            {/* <SimpleBarReact style={{maxHeight:500}}> */}
+            <SimpleBarReact style={{maxHeight:500}}>
              {personajes.map((item, index) => (
                 <div key={index} className={index % 2 === 0 ? "izquierda" : "derecha"}>
                       <div className="card">
@@ -73,7 +73,7 @@ export default function Cronologia() {
                             <img  className="image-19" alt="" src={item.image} />
                       </div>
                 </div> ))} 
-                 {/* </SimpleBarReact>   */}
+                 </SimpleBarReact>  
            </div>
 </div>
 </>
