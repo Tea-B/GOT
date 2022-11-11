@@ -67,8 +67,16 @@
     margin: 0px
       
 }
-.bb{
+.Ellipse-2 .bb{
     transform: rotate(180deg);
+    background-color: transparent!important;
+    
+}
+
+
+.Ellipse-2  .cc{
+    background-color: transparent!important;
+    z-index: 99;
 }
 
 
@@ -98,6 +106,7 @@
    
     img{
         width: 100%;
+        background-color: transparent!important;
     }}
 
 .CRONOLOGIA {
