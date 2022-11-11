@@ -98,7 +98,7 @@ function App() {
             <Route path="/chronology" element={<Cronologia></Cronologia>} />
           </Routes>
         </main>
-        <footer className="abajo">
+        <footer className="footer">
           <NavLink to="/characters" activeClassName="active"><h6 className='links-footer'>PERSONAJES</h6></NavLink> 
           <NavLink to="/houses" activeClassName="active"><h6 className='links-footer'>CASAS</h6></NavLink>
           <NavLink to="/chronology" activeClassName="active"><h6 className='links-footer'>CRONOLOGÍA</h6></NavLink>
