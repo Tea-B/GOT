@@ -45,8 +45,9 @@ export default function Cronologia() {
            <button className="Ellipse-1" type="button" onClick={cambioOrden}><img src={imagen} className= "flechas"/></button>
 
            <div className="Ellipse-2">    
-            <img src={image} className={orden ? 'bb' : 'cc'}/>
-            <img src={image} className={orden ? 'bb' : 'cc'}/>
+
+           <img src={image} className={orden ? 'bb' : 'cc'}/>
+           
            </div>
        </div>
        
@@ -62,14 +63,6 @@ export default function Cronologia() {
                       </div>
                 </div> ))}  
            </div>
-           {/* </SimpleBarReact>   */}
-           
-                  <div className="footer">
-                        <Link to="/characters"><h6 className='links-footer'>PERSONAJES</h6> </Link> 
-                        <Link to="/houses"><h6 className='links-footer'>CASAS</h6></Link>
-                        <Link to="/chronology"><h6 className='links-footer'>CRONOLOGÍA</h6></Link>
-                  </div>
-
 </div>
 
     );
