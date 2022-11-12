@@ -4,13 +4,32 @@
     background-position: center;
    height: 100vh;
    text-align: center;
-   p{
-    font-family: GOT-font;
-    font-size: 900%;
-    margin: 0px;
-    padding-top: 14%;
-    }
+   display: flex;
+   justify-content: center;
 }
+.title{
+  font-family: GOT-font;
+  margin: 0px;
+  padding-top: 14%;
+  font-size: 150px;
+  position: absolute;
+  background-color: transparent;
+  }
+
+  .top{
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    height: 20px;
+  }
+  .idioma{
+    margin-top: 18px;
+
+    img{
+      background-color: transparent;
+      margin-left: 20px;
+    }
+  }
 
   // .abajo{
   //   display:flex;
