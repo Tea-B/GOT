@@ -10,17 +10,28 @@ import 'simplebar-react/dist/simplebar.min.css';
 
 export default function Cronologia() {
     const [personajes, setPersonajes] = useState([]);
+    const [houses, setHouses] = useState([]);
     const [orden, setOrden] = useState(true);
+    
 
-   
-    useEffect(() => {
-        const getData = async () => {
-            const { data } = await axios.get(`https://api.got.show/api/show/characters/`);
+    useEffect(()=> {
+        const getHouse = async ()=> {
+        const {data} = await axios.get(
+          "https://api.got.show/api/show/houses" + houses
+        );
+          setHouses(data[0]);
+          console.log(houses);
+         };
+         
+         const getData = async () => {
+            const { data } = await axios.get(`https://api.got.show/api/show/characters/` + personajes
+            );
             console.log(data);
             setPersonajes(data);
-            
+            await getHouse(data.houses);
         };
         getData();
+        
     }, []);
 
     useEffect(() => {
@@ -31,26 +42,37 @@ export default function Cronologia() {
         }
     }, [orden, personajes]);
 
-   
-    return (
-        <>
-<header  className="CRONOLOGIA">
-       
-       <div  className="arriba">
-         <Link to="/">
-           <img src="Group.svg" alt="house"></img>
-         </Link>
-         <button>
-           <img src="spain 1.svg" alt="españa"></img>
-         </button>
-         <button>
-         <img src="united-kingdom 1.svg" alt="uk"></img>
-         </button>
+    const handleChange = (event) => {
+        const {value} = event.target;
+        searchChar(value);
+      }
+      const searchChar = (name) => {
+        let filtered = personajes.filter((char) => char.name.toLowerCase().includes(name.toLowerCase()));
+        setPersonajes(filtered);}
 
-       </div>
-     </header>
+
+
+    return (
+        <>             
+      <header>
+        <div>
+          <input type="text" placeholder='Buscar...' onChange={handleChange}/>
+        </div>
+        <div>
+          <Link to="/">
+            <img src="Group.svg" alt="house"></img>
+          </Link>
+          <button>
+            <img src="spain 1.svg" alt="españa"></img>
+          </button>
+          <button>
+          <img src="united-kingdom 1.svg" alt="uk"></img>
+          </button>
+
+        </div>
+      </header>
     
-<div className="all">
+ <div className="all">
 
            <div className="Rectangle-4">
            <button className="Ellipse-1" type="button" onClick={cambioOrden}><img src={imagen} className= "flechas"/></button>
@@ -61,10 +83,10 @@ export default function Cronologia() {
            </div>
        </div>
        
+
        
-        
-        <div className="CRONOLOGIA">
-            <SimpleBarReact style={{maxHeight:500}}>
+   <div className="CRONOLOGIA">
+   <SimpleBarReact className="raya">
              {personajes.map((item, index) => (
                 <div key={index} className={index % 2 === 0 ? "izquierda" : "derecha"}>
                       <div className="card">
@@ -72,10 +94,9 @@ export default function Cronologia() {
                             <h5>{item.name}</h5>
                             <img  className="image-19" alt="" src={item.image} />
                       </div>
-                </div> ))} 
-                 </SimpleBarReact>  
-           </div>
-</div>
+                </div> ))}</SimpleBarReact>
+           </div>   
+    </div>
 </>
     );
     function cambioOrden() {
@@ -93,6 +114,6 @@ export default function Cronologia() {
         }
         return personajes;
     }
-  
+ 
 }
 
