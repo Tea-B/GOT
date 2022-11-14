@@ -43,6 +43,7 @@
   margin: 0px;
   padding: 0px;
   text-decoration: none;
+  font-family: GOT-font;
 }
 
 .footer{
@@ -59,7 +60,6 @@
 }
 
 .links-footer{
-  font-family: GOT-font;
   color:white;
   margin:0px;
   font-size: 24px;
