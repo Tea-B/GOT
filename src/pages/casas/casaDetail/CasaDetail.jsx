@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Moment from 'react-moment';
+import moment from 'moment/moment';
 import './CasaDetail.scss'
 
 const CasaDetail = () => {
@@ -64,7 +65,7 @@ const CasaDetail = () => {
               })
             }
           </div>
-          <div className='details-data'><p>{casa.creacion}</p></div>
+          <div className='details-data'><p>{moment(casa.creacion).calendar()}</p></div>
         </div>
       </div>
     </div>
