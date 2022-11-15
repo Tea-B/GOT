@@ -1,5 +1,6 @@
 import './App.css';
 import { Link, Route, Routes, BrowserRouter as Router, NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Home from './pages/home/Home';
 import Personajes from './pages/personajes/Personajes';
@@ -50,6 +51,7 @@ function App() {
     "https://vignette.wikia.nocookie.net/gameofthrones/images/7/76/House-Velaryon-Main-Shield.PNG/revision/latest/scale-to-width-down/350?cb=20161219204203"
   ]
 
+
   let casasFix = (data) => {
 
     let fixedCasas = [];
@@ -84,7 +86,7 @@ function App() {
       <CasasContext.Provider value={{casas, setCasas}}>
         <main>
           <Routes>
-            <Route exact path="/" element={<Home></Home>} />
+            <Route exact path="/" element={<Home></Home>}/>
             <Route path="/characters" element={<div><Personajes></Personajes></div>} />
             <Route
                 path="/characters/:namePersonaje"
@@ -98,11 +100,14 @@ function App() {
             <Route path="/chronology" element={<Cronologia></Cronologia>} />
           </Routes>
         </main>
+
+
         <footer className="footer">
           <NavLink to="/characters" activeClassName="active"><h6 className='links-footer'>PERSONAJES</h6></NavLink> 
           <NavLink to="/houses" activeClassName="active"><h6 className='links-footer'>CASAS</h6></NavLink>
           <NavLink to="/chronology" activeClassName="active"><h6 className='links-footer'>CRONOLOGÍA</h6></NavLink>
         </footer>
+        
       </CasasContext.Provider>
     </Router>
   );

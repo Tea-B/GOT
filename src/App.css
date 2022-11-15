@@ -45,7 +45,7 @@
   text-decoration: none;
 }
 
-.footer{
+.abajo{
   display:flex;
   justify-content: space-around;
   align-items: center;
@@ -55,7 +55,6 @@
   bottom:0px;
   left:0px;
   background-color: black;
-  /* height: 16vh; */
 }
 
 .links-footer{
