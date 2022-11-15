@@ -11,6 +11,7 @@ const Home = () => {
     <h1>Game of Thrones</h1>
   
   </div>
+  </>
   )
 }
 

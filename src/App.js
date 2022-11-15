@@ -101,11 +101,12 @@ function App() {
           </Routes>
         </main>
 
-          <footer className="abajo">
-            <NavLink to="/characters" activeClassName="active"><h6 className='links-footer'>PERSONAJES</h6></NavLink> 
-            <NavLink to="/houses" activeClassName="active"><h6 className='links-footer'>CASAS</h6></NavLink>
-            <NavLink to="/chronology" activeClassName="active"><h6 className='links-footer'>CRONOLOGÍA</h6></NavLink>
-          </footer>
+
+        <footer className="footer">
+          <NavLink to="/characters" activeClassName="active"><h6 className='links-footer'>PERSONAJES</h6></NavLink> 
+          <NavLink to="/houses" activeClassName="active"><h6 className='links-footer'>CASAS</h6></NavLink>
+          <NavLink to="/chronology" activeClassName="active"><h6 className='links-footer'>CRONOLOGÍA</h6></NavLink>
+        </footer>
         
       </CasasContext.Provider>
     </Router>
