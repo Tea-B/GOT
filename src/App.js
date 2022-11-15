@@ -1,5 +1,6 @@
 import './App.css';
 import { Link, Route, Routes, BrowserRouter as Router, NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Home from './pages/home/Home';
 import Personajes from './pages/personajes/Personajes';

@@ -3,16 +3,19 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-    padding-top: 122px;
+    padding-top: 10px;
 }
 
+.raya{
+    height:480px;
+}
 
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: transparent! important;
     align-items: center;
-    align-content: center;
+    top:2px;
     
 
     img{
@@ -20,12 +23,11 @@
         height: 80px;
         margin: 19px 133px 0;
         border-radius: 100px;
-        top:0px;
         margin-bottom: 200px;
     }
     h5{
-            font-family: GOT-font;
-            font-size: 27px;}
+    font-family: GOT-font;
+    font-size: 27px;}
 
     p{
      font-family: GOT-font;
@@ -35,9 +37,9 @@
 
 .izquierda{   
     margin-right: 50%;
-    width: 50%;
+  
     border-top: 2px solid rgb(255, 255, 255);
-    border-right: 2px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -47,12 +49,12 @@
 }
 
 .derecha{
-    width: 50%;
+ 
     margin-left: 50%;
     display: flex;
     border-top: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
-    border-left: 2px solid rgb(255, 255, 255);
+    border-left: 3px solid rgb(255, 255, 255);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -64,25 +66,39 @@
     align-items: center;
     align-content: center;
     flex-direction: column;
-    margin: 0px
-      
+    margin: 0px;
+    height: 70px;
+   
 }
-.bb{
+.Ellipse-2 .bb{
     transform: rotate(180deg);
+    background-color: transparent!important;
+    
 }
 
 
+.Ellipse-2  .cc{
+    background-color: transparent!important;
+    z-index: 99;
+}
+.Ellipse-2 .bb{
+    background-color: transparent! important;
+    z-index: 99
+}
+.Ellipse-2 .cc{
+    background-color: transparent! important;
+}
 .Ellipse-2{
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     height: 100px;
-    width: 2px;
+    width: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
       img{
         width: 30px;
-        margin-top: 80px;
- 
+        margin-top: 25px;
+      
 
       }
     
@@ -90,15 +106,32 @@
 .Ellipse-1 {
     width: 59px;
     height: 59px;
-    margin:0px;
-    background:none;
+  background-color: black;
     color: white;
     border-radius: 100px;
     border:2px solid white;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  box-shadow: 0 9px  #323030;;
+
+  img{
+  height: 35px;
+  background-color: transparent! important;
+    width: 100%;
+}}
+
+  .Ellipse-1:hover {
+    background-color: #323030;
+}
+
+  .Ellipse-1:active {
+  background-color: #666;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
    
-    img{
-        width: 100%;
-    }}
+
 
 .CRONOLOGIA {
     display: inline-block;
