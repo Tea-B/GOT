@@ -14,9 +14,36 @@
 
 .scroll{
     width: 86vw;
-    height:calc(100vh - 160px);
+    height:calc(100vh - 200px);
     margin: 0px 6vw 0px 8vw;
     // backgroundColor: "black"
+
+
+    
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 2px;
+    bottom: 2px;
+}
+
+.simplebar-track{
+    background-color:#443d3d;
+}
+
+.simplebar-track.simplebar-vertical{
+    width: 4px !important;
+}
+
+.simplebar-scrollbar{
+    border-radius: 2px;
+    height: 90px !important;
+    min-height: 90px !important;
+    background-color: white;
+}
+
+.simplebar-scrollbar:before {
+    visibility: hidden;
+}
+
 }
 
 
@@ -68,27 +95,3 @@
     
 }
 
-
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-    top: 2px;
-    bottom: 2px;
-}
-
-.simplebar-track{
-    background-color:#443d3d;
-}
-
-.simplebar-track.simplebar-vertical{
-    width: 4px !important;
-}
-
-.simplebar-scrollbar{
-    border-radius: 2px;
-    height: 90px !important;
-    min-height: 90px !important;
-    background-color: white;
-}
-
-.simplebar-scrollbar:before {
-    visibility: hidden;
-}
