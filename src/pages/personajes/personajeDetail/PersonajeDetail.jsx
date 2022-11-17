@@ -162,11 +162,13 @@ const PersonajeDetail = () => {
         <h6>
             TITULOS
           </h6>
+          <SimpleBar forceVisible="y" autoHide={false} className="small-scroll">
           <div class="lista">
           {character.titles?.map((item, index) =>
           <li>{item}</li>
         )}
         </div>
+        </SimpleBar>
         </div>
       </div>
     </div>
