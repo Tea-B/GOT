@@ -37,9 +37,16 @@
   }
 }
 
+header{
+  background-color: black;
+}
+button{
+  background-color: transparent !important;
+}
+
 * {
   color: white;
-  background-color: black;
+
   margin: 0px;
   padding: 0px;
   text-decoration: none;
@@ -55,15 +62,13 @@
   position:fixed;
   bottom:0px;
   left:0px;
-  background-color: black;
-}
-
-.links-footer{
   color:white;
   margin:0px;
-  font-size: 24px;
+  font-size: 29px;
   z-index:99;
+  
 }
+
 
 .active {
   text-decoration: underline;

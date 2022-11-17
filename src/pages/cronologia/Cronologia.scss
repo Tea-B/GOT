@@ -7,7 +7,7 @@
 }
 
 .raya{
-    height:480px;
+    height:420px;
 }
 
 .card{
@@ -69,7 +69,7 @@
 
 .rayota{
     background-color: rgb(255, 255, 255);
-    height: 100%;
+    height: 420px;
     width: 5px;
     position: fixed; 
     margin-left: 24.8%;
@@ -117,7 +117,7 @@
 
   img{
   height: 35px;
-  background-color: transparent! important;
+  background-color: transparent !important;
     width: 100%;
 }}
 
@@ -140,25 +140,11 @@
 }
 
 
-  .head{
+.head{
     display:flex;
     justify-content: flex-end;
     align-items: center;
     height:100px;
     width:100%;
-    position:fixed;
-    top:0px;
-    left:0px;
-    background-color: black;
-
-    
-}
-
-.links-home{
-        font-family: GOT-font;
-        color:white;
-        margin:0px;
-        font-size: 24px;
-        z-index:99;
-        margin-right: 10%;
+    top:0px; 
 }
