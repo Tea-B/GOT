@@ -10,25 +10,15 @@ import 'simplebar-react/dist/simplebar.min.css';
 
 export default function Cronologia() {
     const [personajes, setPersonajes] = useState([]);
-    const [houses, setHouses] = useState([]);
+
     const [orden, setOrden] = useState(true);
     
-
     useEffect(()=> {
-        const getHouse = async ()=> {
-        const {data} = await axios.get(
-          "https://api.got.show/api/show/houses" + houses
-        );
-          setHouses(data[0]);
-          console.log(houses);
-         };
-         
          const getData = async () => {
-            const { data } = await axios.get(`https://api.got.show/api/show/characters/` + personajes
+            const { data } = await axios.get(`https://api.got.show/api/show/characters/`
             );
             console.log(data);
             setPersonajes(data);
-            await getHouse(data.houses);
         };
         getData();
         
@@ -82,11 +72,10 @@ export default function Cronologia() {
 
            </div>
        </div>
-       
 
-       
    <div className="CRONOLOGIA">
    <SimpleBarReact className="raya">
+   <div className="rayota"></div>
              {personajes.map((item, index) => (
                 <div key={index} className={index % 2 === 0 ? "izquierda" : "derecha"}>
                       <div className="card">
