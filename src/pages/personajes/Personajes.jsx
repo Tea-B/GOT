@@ -85,9 +85,9 @@ const Characters = () => {
     <div className="page-container">
       <header>
         <div>
-          <input type="text" placeholder='Buscar...' /*onChange={handleChange}*//>
+        <input type="text" placeholder='Buscar...' /*onChange={handleChange}*//>
         </div>
-        <div>
+        <div className='iconos'>
           <Link to="/">
             <img src="Group.svg" alt="house"></img>
           </Link>
@@ -97,7 +97,6 @@ const Characters = () => {
           <button>
           <img src="united-kingdom 1.svg" alt="uk"></img>
           </button>
-
         </div>
       </header>
       

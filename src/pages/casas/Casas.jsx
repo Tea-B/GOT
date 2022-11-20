@@ -101,7 +101,7 @@ const Casas = () => {
         <div>
           <input type="text" placeholder='Buscar...' onChange={handleChange}/>
         </div>
-        <div>
+        <div className='iconos'>
           <Link to="/">
             <img src="Group.svg" alt="house"></img>
           </Link>

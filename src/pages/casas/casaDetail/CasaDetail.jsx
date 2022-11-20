@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Moment from 'react-moment';
 import moment from 'moment/moment';
 import './CasaDetail.scss'
+import HeaderDetails from '../../../components/HeaderDetails';
 
 const CasaDetail = () => {
 
@@ -14,25 +15,7 @@ const CasaDetail = () => {
 
   return (
     <div>
-      <header>
-        <div>
-        <Link to="/characters">
-          Volver
-        </Link>
-        </div>
-        <div>
-          <Link to="/">
-            <img src="../Group.svg" alt="house"></img>
-          </Link>
-          <button>
-            <img src="../spain 1.svg" alt="españa"></img>
-          </button>
-          <button>
-          <img src="../united-kingdom 1.svg" alt="uk"></img>
-          </button>
-
-        </div>
-      </header>
+      <HeaderDetails></HeaderDetails>
       <div className='casaD'>
         <div className='galeryD'>
           <img src={casa.img ? casa.img : placeholderImage} alt={casa.alt}/>

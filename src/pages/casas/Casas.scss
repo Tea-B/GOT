@@ -31,18 +31,26 @@ header {
     align-items: center;
     justify-content:space-evenly;
 
-    button:hover{
+    button:hover {
         cursor: pointer
     }
 
-    img{
-        width:40px;margin: 0px 2% 0px 2%;
+    img {
+        width:40px;
+        margin: 0px 8px 0px 8px;
     }
 
-    input{
-        width: 60%;
+    input {
+        margin: 0px 0px 0px 40px;
+        width: 600px;
+        height: 30px;
+        background-color: black;
         border-top: 0px solid black;
         border-right: 0px solid black;
+    }
+
+    input:focus {
+        outline: none;
     }
     
     div{
@@ -50,6 +58,10 @@ header {
         display:flex;
         justify-content: center;
     }
+}
+
+.iconos {
+    margin-left: 35%;
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {

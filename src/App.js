@@ -9,6 +9,7 @@ import Casas from './pages/casas/Casas';
 import CasaDetail from './pages/casas/casaDetail/CasaDetail';
 import Cronologia from './pages/cronologia/Cronologia';
 import React from 'react';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -31,11 +32,7 @@ function App() {
           <Route path="/chronology" element={<Cronologia></Cronologia>} />
         </Routes>
       </main>
-      <footer className="abajo">
-        <NavLink to="/characters" activeClassName="active"><h6 className='links-footer'>PERSONAJES</h6></NavLink> 
-        <NavLink to="/houses" activeClassName="active"><h6 className='links-footer'>CASAS</h6></NavLink>
-        <NavLink to="/chronology" activeClassName="active"><h6 className='links-footer'>CRONOLOGÍA</h6></NavLink>
-      </footer>
+      <Footer></Footer>
     </Router>
   );
 }

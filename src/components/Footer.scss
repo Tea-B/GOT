@@ -1,0 +1,19 @@
+.abajo {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100px;
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    color:white;
+    margin:0px;
+    font-size: 29px;
+    z-index:99;
+    font-size: 32px;
+}
+  
+.active {
+    text-decoration: underline;
+}
