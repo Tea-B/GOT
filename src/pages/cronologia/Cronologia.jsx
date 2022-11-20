@@ -1,38 +1,32 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./Cronologia.scss";
-import { Link } from "react-router-dom";
+import { NavLink , Link} from "react-router-dom"; 
 import imagen from '../../assets/i.png'
 import image from '../../assets/2.png'
 import SimpleBarReact from 'simplebar-react'
 import 'simplebar-react/dist/simplebar.min.css';
 
 
+
+let casafixed;
+
 export default function Cronologia() {
     const [personajes, setPersonajes] = useState([]);
-    const [houses, setHouses] = useState([]);
     const [orden, setOrden] = useState(true);
-    
 
-    useEffect(()=> {
-        const getHouse = async ()=> {
-        const {data} = await axios.get(
-          "https://api.got.show/api/show/houses" + houses
-        );
-          setHouses(data[0]);
-          console.log(houses);
-         };
-         
-         const getData = async () => {
-            const { data } = await axios.get(`https://api.got.show/api/show/characters/` + personajes
-            );
-            console.log(data);
-            setPersonajes(data);
-            await getHouse(data.houses);
-        };
-        getData();
-        
-    }, []);
+  useEffect(()=> {
+
+    const getData = async ()=> {
+    const {data} = await axios.get(
+        "https://api.got.show/api/show/characters/"
+    );
+      setPersonajes(data);
+      console.log(data);       
+      };
+
+    getData();
+  },[]);
 
     useEffect(() => {
         if (orden) {
@@ -42,22 +36,13 @@ export default function Cronologia() {
         }
     }, [orden, personajes]);
 
-    const handleChange = (event) => {
-        const {value} = event.target;
-        searchChar(value);
-      }
-      const searchChar = (name) => {
-        let filtered = personajes.filter((char) => char.name.toLowerCase().includes(name.toLowerCase()));
-        setPersonajes(filtered);}
+    
 
 
 
     return (
         <>             
-      <header>
-        <div>
-          <input type="text" placeholder='Buscar...' onChange={handleChange}/>
-        </div>
+      <header className="head">
         <div>
           <Link to="/">
             <img src="Group.svg" alt="house"></img>
@@ -82,17 +67,19 @@ export default function Cronologia() {
 
            </div>
        </div>
-       
 
-       
    <div className="CRONOLOGIA">
    <SimpleBarReact className="raya">
+   <div className="rayota"></div>
              {personajes.map((item, index) => (
+                    
                 <div key={index} className={index % 2 === 0 ? "izquierda" : "derecha"}>
                       <div className="card">
+                      <NavLink to={`/characters/${item.name}`} state={{item}}> 
                             <p>{item.age?.age}</p>
                             <h5>{item.name}</h5>
                             <img  className="image-19" alt="" src={item.image} />
+                            </NavLink>
                       </div>
                 </div> ))}</SimpleBarReact>
            </div>   

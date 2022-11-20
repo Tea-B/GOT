@@ -6,9 +6,22 @@ const Home = () => {
       
 
   return (
+    <>
+    <div className="headd">
+        <div className='idiomas'>
+          <button>
+            <img src="spain 1.svg" alt="españa"></img>
+          </button>
+          <button>
+          <img src="united-kingdom 1.svg" alt="uk"></img>
+          </button>
+
+        </div>
+      </div>
     <div className="todo">
 
-      <h1>Game of Thrones</h1>
+
+    <p>Game of Thrones</p>
   
     </div>
   )

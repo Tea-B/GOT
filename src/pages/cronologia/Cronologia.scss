@@ -7,15 +7,16 @@
 }
 
 .raya{
-    height:480px;
+    height:420px;
 }
 
 .card{
     display: flex;
     flex-direction: column;
-    background-color: transparent! important;
+    background-color: transparent !important;
     align-items: center;
-    top:2px;
+    height: 135px;
+    text-align: center;
     
 
     img{
@@ -27,20 +28,17 @@
     }
     h5{
     font-family: GOT-font;
-    font-size: 27px;}
+    font-size: 19px;}
 
     p{
      font-family: GOT-font;
-      font-size: 15px;}
+      font-size: 25px;}
 }
 
 
 .izquierda{   
     margin-right: 50%;
-  
     border-top: 2px solid rgb(255, 255, 255);
-    border-right: 3px solid rgb(255, 255, 255);
-    border-bottom: 2px solid rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,8 +51,6 @@
     margin-left: 50%;
     display: flex;
     border-top: 2px solid rgb(255, 255, 255);
-    border-bottom: 2px solid rgb(255, 255, 255);
-    border-left: 3px solid rgb(255, 255, 255);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,27 +62,30 @@
     align-items: center;
     align-content: center;
     flex-direction: column;
-    margin: 0px;
-    height: 70px;
+    height: 100px;
+    width: 5px;
    
 }
-.Ellipse-2 .bb{
-    transform: rotate(180deg);
-    background-color: transparent!important;
-    
-}
 
+.rayota{
+    background-color: rgb(255, 255, 255);
+    height: 420px;
+    width: 5px;
+    position: fixed; 
+    margin-left: 24.8%;
+
+}
 
 .Ellipse-2  .cc{
     background-color: transparent!important;
     z-index: 99;
 }
+
 .Ellipse-2 .bb{
-    background-color: transparent! important;
+    transform: rotate(180deg);
+    background-color: transparent!important;
     z-index: 99
-}
-.Ellipse-2 .cc{
-    background-color: transparent! important;
+    
 }
 .Ellipse-2{
     background-color: rgb(255, 255, 255);
@@ -95,14 +94,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    // bottom:0px;
       img{
-        width: 30px;
-        margin-top: 25px;
+        width: 35px;
+        margin-top: 58px;
       
-
       }
-    
 }
+
 .Ellipse-1 {
     width: 59px;
     height: 59px;
@@ -117,7 +117,7 @@
 
   img{
   height: 35px;
-  background-color: transparent! important;
+  background-color: transparent !important;
     width: 100%;
 }}
 
@@ -140,25 +140,11 @@
 }
 
 
-  .head{
+.head{
     display:flex;
     justify-content: flex-end;
     align-items: center;
     height:100px;
     width:100%;
-    position:fixed;
-    top:0px;
-    left:0px;
-    background-color: black;
-
-    
-}
-
-.links-home{
-        font-family: GOT-font;
-        color:white;
-        margin:0px;
-        font-size: 24px;
-        z-index:99;
-        margin-right: 10%;
+    top:0px; 
 }
