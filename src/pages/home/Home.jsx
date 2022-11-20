@@ -20,10 +20,10 @@ const Home = () => {
       </div>
     <div className="todo">
 
+
     <p>Game of Thrones</p>
   
-  </div>
-  </>
+    </div>
   )
 }
 
