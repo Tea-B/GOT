@@ -43,7 +43,7 @@ export default function Cronologia() {
     return (
         <>             
       <header className="head">
-        <div>
+        <div className='iconos'>
           <Link to="/">
             <img src="Group.svg" alt="house"></img>
           </Link>

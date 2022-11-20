@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import "./PersonajeDetail.scss";
 import { useLocation } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
+import HeaderDetails from '../../../components/HeaderDetails';
 
 let casafixed;
 
@@ -81,26 +82,7 @@ const PersonajeDetail = () => {
 
   return (
     <div className='page-full'>
-      <header>
-        <div>
-        <Link to="/characters">
-          Volver
-        </Link>
-        </div>
-        <div>
-          <Link to="/">
-            <img src="../Group.svg" alt="house"></img>
-          </Link>
-          <button>
-            <img src="../spain 1.svg" alt="españa"></img>
-          </button>
-          <button>
-          <img src="../united-kingdom 1.svg" alt="uk"></img>
-          </button>
-
-        </div>
-      </header>
-      
+      <HeaderDetails></HeaderDetails>      
       <div className="contenedor">
         
         <img src = {character.image} alt="imagen personaje" className="img-char"/>
