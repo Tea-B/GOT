@@ -8,10 +8,9 @@ const Home = () => {
   return (
     <div className="todo">
 
-    <h1>Game of Thrones</h1>
+      <h1>Game of Thrones</h1>
   
-  </div>
-  </>
+    </div>
   )
 }
 
