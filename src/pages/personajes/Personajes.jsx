@@ -7,6 +7,7 @@ import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+import Languages from '../../shared/Languages';
 
 let charactersDone = [];
 let charactersSearched = [];
@@ -91,12 +92,7 @@ const Characters = () => {
           <Link to="/">
             <img src="Group.svg" alt="house"></img>
           </Link>
-          <button>
-            <img src="spain 1.svg" alt="españa"></img>
-          </button>
-          <button>
-          <img src="united-kingdom 1.svg" alt="uk"></img>
-          </button>
+          <Languages></Languages>
 
         </div>
       </header>

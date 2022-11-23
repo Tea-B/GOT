@@ -1,0 +1,27 @@
+{
+    
+    "characters": "CHARACTERS",
+    "houses": "HOUSES",
+    "chrono": "CHRONOLOGY",
+
+    "return": "Go Back",
+
+    "detailc": {
+        "house": "HOUSE",
+        "allegiances": "ALLEGIANCES",
+        "appearances": "APPEARANCES",
+        "father": "FATHER",
+        "siblings": "SIBLINGS",
+        "titles": "TITLES",
+        "religion": "RELIGION"
+    },
+
+    "detailh": {
+        "words": "WORDS",
+        "seat": "SEAT",
+        "region": "REGION",
+        "allegiance": "ALLEGIANCES",
+        "religion": "RELIGIONS",
+        "createdAt": "CREATED"
+    }
+}

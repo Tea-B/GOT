@@ -10,10 +10,13 @@ import CasaDetail from './pages/casas/casaDetail/CasaDetail';
 import Cronologia from './pages/cronologia/Cronologia';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useTranslation } from "react-i18next";
+import Languages from "./shared/Languages";
 
 export const CasasContext = React.createContext();
 
 function App() {
+  const [t, i18n] = useTranslation('global');
 
   const [casas, setCasas] = useState([]);
 
